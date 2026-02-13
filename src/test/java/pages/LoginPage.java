@@ -9,9 +9,9 @@ public class LoginPage {
     WebDriver driver;
 
     // Step 2: Create locators
-    By usernameField = By.id("user-name");
-    By passwordField = By.id("password");
-    By loginButton = By.id("login-button");
+    By fillUsername = By.id("user-name");
+    By fillPassword = By.id("password");
+    By clickLogin = By.id("login-button");
 
     // Step 3: Constructor
     public LoginPage(WebDriver driver) {
@@ -20,9 +20,9 @@ public class LoginPage {
 
     // Step 4: Page actions
     public void login(String username, String password) {
-        driver.findElement(usernameField).sendKeys(username);
-        driver.findElement(passwordField).sendKeys(password);
-        driver.findElement(loginButton).click();
+        driver.findElement(fillUsername).sendKeys(username);
+        driver.findElement(fillPassword).sendKeys(password);
+        driver.findElement(clickLogin).click();
     }
 
     // Step 5: Page state (NO verification here)
